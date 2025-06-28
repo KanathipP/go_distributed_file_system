@@ -2,7 +2,6 @@ package p2p
 
 import (
 	"encoding/gob"
-	"fmt"
 	"io"
 )
 
@@ -28,8 +27,6 @@ func (dec DefaultDecoder) Decode(r io.Reader, rpc *RPC) error {
 	}
 
 	rpc.Payload = buf[:n]
-
-	fmt.Println(string(buf[:n]))
 
 	return nil
 }
